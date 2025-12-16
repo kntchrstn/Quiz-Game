@@ -174,34 +174,52 @@ const TrueFalse = () => {
         <GameHeader category="trueFalse" />
         <div className="container mx-auto px-4 py-12 min-h-[calc(100vh-80px)] flex items-center justify-center">
           <div className="max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-12 text-center border border-gray-100">
-            <h1 className="text-4xl font-bold mb-4">Time's Up!</h1>
-            <div className="space-y-4 mb-6">
-              <p className="text-3xl text-blue-600 font-bold">Final Score: {score}</p>
-              <div className="grid grid-cols-2 gap-4 text-left max-w-md mx-auto">
-                <div>
-                  <p className="text-gray-600">Correct:</p>
-                  <p className="text-2xl font-bold text-green-600">{correctCount}</p>
-                </div>
-                <div>
-                  <p className="text-gray-600">Wrong:</p>
-                  <p className="text-2xl font-bold text-red-600">{wrongCount}</p>
-                </div>
-                <div>
-                  <p className="text-gray-600">Total Questions:</p>
-                  <p className="text-2xl font-bold">{totalQuestions}</p>
-                </div>
-                <div>
-                  <p className="text-gray-600">Accuracy:</p>
-                  <p className="text-2xl font-bold">{accuracy}%</p>
-                </div>
+            <div className="text-7xl mb-6 animate-float">⏰</div>
+            <h1 className="text-5xl font-bold mb-6 text-gradient">Time's Up!</h1>
+            
+            {/* Final Score Display */}
+            <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-2xl p-8 mb-8 shadow-lg">
+              <p className="text-2xl font-semibold mb-2 opacity-90">Final Score</p>
+              <p className="text-6xl font-bold">{score}</p>
+            </div>
+            
+            {/* Stats Grid */}
+            <div className="grid grid-cols-2 gap-6 mb-8 max-w-lg mx-auto">
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border-2 border-green-200 shadow-md">
+                <p className="text-sm font-semibold text-gray-600 mb-2">Correct</p>
+                <p className="text-4xl font-bold text-green-600">{correctCount}</p>
+              </div>
+              <div className="bg-gradient-to-br from-red-50 to-rose-50 rounded-xl p-6 border-2 border-red-200 shadow-md">
+                <p className="text-sm font-semibold text-gray-600 mb-2">Wrong</p>
+                <p className="text-4xl font-bold text-red-600">{wrongCount}</p>
+              </div>
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border-2 border-blue-200 shadow-md">
+                <p className="text-sm font-semibold text-gray-600 mb-2">Total Questions</p>
+                <p className="text-4xl font-bold text-blue-600">{totalQuestions}</p>
+              </div>
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-200 shadow-md">
+                <p className="text-sm font-semibold text-gray-600 mb-2">Accuracy</p>
+                <p className="text-4xl font-bold text-purple-600">{accuracy}%</p>
               </div>
             </div>
-            <div className="flex gap-4 justify-center">
+            
+            {/* Streak Display */}
+            {streak > 0 && (
+              <div className="mb-8">
+                <div className="bg-gradient-to-r from-orange-100 to-yellow-100 rounded-xl p-4 border-2 border-orange-300 inline-block">
+                  <p className="text-sm font-semibold text-gray-700 mb-1">Best Streak</p>
+                  <p className="text-3xl font-bold text-orange-600">🔥 {streak}</p>
+                </div>
+              </div>
+            )}
+            
+            {/* Action Buttons */}
+            <div className="flex gap-4 justify-center flex-wrap">
               <Button onClick={handleRestart} size="lg" variant="primary">
-                Play Again
+                🔄 Play Again
               </Button>
               <Button onClick={() => navigate('/')} size="lg" variant="secondary">
-                Home
+                🏠 Home
               </Button>
             </div>
           </div>
