@@ -1,35 +1,35 @@
 [
   {
     "id": 1,
-    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "images": ["/pyramid1.jpg", "/pyramid2.jpg", "/pyramid3.jpg", "/pyramid4.jpg"],
     "answer": "PYRAMID",
     "difficulty": "easy",
     "hint": "Ancient Egyptian triangular tombs"
   },
   {
     "id": 2,
-    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "images": ["/nile1.jpg", "/nile2.jpg", "/nile3.jpg", "/nile4.jpg"],
     "answer": "NILE",
     "difficulty": "easy",
     "hint": "The longest river in Africa, flows through Egypt"
   },
   {
     "id": 3,
-    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "images": ["/cairo1.jpg", "/cairo2.jpg", "/cairo3.jpg", "/cairo4.jpg"],
     "answer": "CAIRO",
     "difficulty": "easy",
     "hint": "The capital city of Egypt"
   },
   {
     "id": 4,
-    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "images": ["/sphinx1.jpg", "/sphinx2.jpg", "/sphinx3.jpg", "/sphinx4.jpg"],
     "answer": "SPHINX",
     "difficulty": "easy",
     "hint": "Mythical creature with a lion's body and human head"
   },
   {
     "id": 5,
-    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "images": ["/pharaoh1.jpg", "/pharaoh2.jpg", "/pharaoh3.jpg", "/pharaoh4.jpg"],
     "answer": "PHARAOH",
     "difficulty": "easy",
     "hint": "Ancient Egyptian ruler"

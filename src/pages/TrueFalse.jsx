@@ -170,10 +170,10 @@ const TrueFalse = () => {
     const accuracy = totalQuestions > 0 ? ((correctCount / totalQuestions) * 100).toFixed(1) : 0;
     
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+      <div className="h-screen overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 flex flex-col">
         <GameHeader category="trueFalse" />
-        <div className="container mx-auto px-4 py-12 min-h-[calc(100vh-80px)] flex items-center justify-center">
-          <div className="max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8 sm:p-10 text-center border border-gray-100">
+        <div className="flex-1 container mx-auto px-4 py-4 sm:py-6 flex items-center justify-center overflow-y-auto">
+          <div className="max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-6 sm:p-8 text-center border border-gray-100 my-auto">
             <div className="text-6xl mb-4 animate-float">⏰</div>
             <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-gradient">Time's Up!</h1>
             
@@ -231,12 +231,12 @@ const TrueFalse = () => {
   const currentQuestion = questions[currentQuestionIndex];
   
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+    <div className="h-screen overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 flex flex-col">
       <GameHeader category="trueFalse" showTimer timer={seconds} />
-      <div className="container mx-auto px-4 py-8 min-h-[calc(100vh-80px)] flex items-center justify-center">
-        <div className="max-w-3xl w-full">
+      <div className="flex-1 container mx-auto px-4 py-4 sm:py-6 flex items-center justify-center overflow-y-auto">
+        <div className="max-w-3xl w-full my-auto">
           {/* Stats Bar */}
-          <div className="bg-white rounded-xl shadow-lg p-4 mb-6">
+          <div className="bg-white rounded-xl shadow-lg p-3 sm:p-4 mb-4 sm:mb-6">
             <div className="flex justify-between items-center flex-wrap gap-4">
               <div className="text-center">
                 <div className="text-sm text-gray-600">Score</div>
@@ -258,25 +258,25 @@ const TrueFalse = () => {
           </div>
           
           {/* Question Card */}
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <div className="text-center mb-8">
-              <div className={`text-6xl font-bold mb-4 ${
+          <div className="bg-white rounded-xl shadow-lg p-6 sm:p-8">
+            <div className="text-center mb-6">
+              <div className={`text-5xl sm:text-6xl font-bold mb-3 ${
                 seconds <= 5 ? 'text-red-600 animate-pulse' : 'text-gray-800'
               }`}>
                 {seconds}
               </div>
-              <h2 className="text-3xl font-bold text-gray-800">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 leading-tight">
                 {currentQuestion?.statement}
               </h2>
             </div>
             
             {/* Answer Buttons */}
-            <div className="grid grid-cols-2 gap-6 mb-6">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-4">
               <Button
                 onClick={() => handleAnswer(true)}
                 variant={showFeedback && currentQuestion?.isTrue === true ? 'success' : showFeedback && selectedAnswer === true && !isCorrect ? 'danger' : 'success'}
                 size="lg"
-                className={`py-8 text-2xl transition-all ${
+                className={`py-6 sm:py-8 text-xl sm:text-2xl transition-all ${
                   showFeedback && currentQuestion?.isTrue === true
                     ? 'bg-gradient-to-r from-green-500 to-emerald-500 shadow-lg scale-105'
                     : showFeedback && selectedAnswer === true && !isCorrect
@@ -291,7 +291,7 @@ const TrueFalse = () => {
                 onClick={() => handleAnswer(false)}
                 variant={showFeedback && currentQuestion?.isTrue === false ? 'success' : showFeedback && selectedAnswer === false && !isCorrect ? 'danger' : 'danger'}
                 size="lg"
-                className={`py-8 text-2xl transition-all ${
+                className={`py-6 sm:py-8 text-xl sm:text-2xl transition-all ${
                   showFeedback && currentQuestion?.isTrue === false
                     ? 'bg-gradient-to-r from-green-500 to-emerald-500 shadow-lg scale-105'
                     : showFeedback && selectedAnswer === false && !isCorrect
@@ -306,15 +306,15 @@ const TrueFalse = () => {
             
             {/* Feedback Message */}
             {showFeedback && (
-              <div className={`text-center p-6 rounded-xl mb-6 shadow-lg ${
+              <div className={`text-center p-4 sm:p-6 rounded-xl mb-4 shadow-lg ${
                 isCorrect
                   ? 'bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 border-2 border-green-500'
                   : 'bg-gradient-to-r from-red-100 to-rose-100 text-red-800 border-2 border-red-500'
               }`}>
-                <div className="text-4xl mb-2">
+                <div className="text-3xl sm:text-4xl mb-2">
                   {isCorrect ? '✓' : '✗'}
                 </div>
-                <div className="text-2xl font-bold">
+                <div className="text-xl sm:text-2xl font-bold">
                   {isCorrect
                     ? 'Correct!'
                     : `Wrong! The correct answer is: ${currentQuestion?.isTrue ? 'True' : 'False'}`}

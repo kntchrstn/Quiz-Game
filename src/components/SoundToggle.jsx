@@ -30,11 +30,11 @@ const SoundToggle = () => {
   return (
     <button
       onClick={toggleSound}
-      className="px-4 py-2 glass rounded-xl hover:bg-white/30 transition-all duration-300 flex items-center gap-2 font-medium backdrop-blur-sm hover:scale-105 active:scale-95"
+      className="px-2 sm:px-4 py-1.5 sm:py-2 glass rounded-lg sm:rounded-xl hover:bg-white/30 transition-all duration-300 flex items-center gap-1 sm:gap-2 font-medium backdrop-blur-sm hover:scale-105 active:scale-95"
       title={soundEnabled ? 'Disable sounds' : 'Enable sounds'}
     >
-      <span className="text-xl">{soundEnabled ? '🔊' : '🔇'}</span>
-      <span className="hidden sm:inline">{soundEnabled ? 'Sound On' : 'Sound Off'}</span>
+      <span className="text-lg sm:text-xl">{soundEnabled ? '🔊' : '🔇'}</span>
+      <span className="hidden sm:inline text-sm sm:text-base">{soundEnabled ? 'Sound On' : 'Sound Off'}</span>
     </button>
   );
 };

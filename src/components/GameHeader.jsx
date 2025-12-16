@@ -49,46 +49,55 @@ const GameHeader = ({ category = null, timer = null, showTimer = false }) => {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full translate-x-1/2 translate-y-1/2 animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
       </div>
       
-      <div className="container mx-auto px-4 py-5 relative z-10">
-        <div className="flex items-center justify-between flex-wrap gap-4">
-          <div className="flex items-center gap-4">
+      <div className="container mx-auto px-2 sm:px-4 py-3 sm:py-5 relative z-10">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
+          {/* Left Section: Title and Home Button */}
+          <div className="flex items-center gap-2 sm:gap-4 w-full sm:w-auto justify-between sm:justify-start">
             <button
               onClick={() => navigate('/')}
-              className="text-3xl font-bold hover:text-blue-200 transition-all duration-300 hover:scale-105 flex items-center gap-2"
+              className="text-xl sm:text-2xl md:text-3xl font-bold hover:text-blue-200 transition-all duration-300 hover:scale-105 flex items-center gap-1 sm:gap-2"
             >
-              <span className="text-4xl">🎮</span>
-              <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+              <span className="text-2xl sm:text-3xl md:text-4xl">🎮</span>
+              <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent hidden sm:inline">
                 Egypt Educational Game!
+              </span>
+              <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent sm:hidden">
+                Egypt Game!
               </span>
             </button>
             <button
               onClick={() => navigate('/')}
-              className="px-4 py-2 glass rounded-xl hover:bg-white/30 transition-all duration-300 font-medium backdrop-blur-sm"
+              className="px-2 sm:px-4 py-1.5 sm:py-2 glass rounded-lg sm:rounded-xl hover:bg-white/30 transition-all duration-300 font-medium backdrop-blur-sm text-sm sm:text-base"
             >
-              🏠 Home
+              <span className="hidden sm:inline">🏠 Home</span>
+              <span className="sm:hidden">🏠</span>
             </button>
           </div>
           
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
+          {/* Right Section: Controls and Scores */}
+          <div className="flex items-center gap-2 sm:gap-4 w-full sm:w-auto justify-end">
+            {/* Sound Controls */}
+            <div className="flex items-center gap-1 sm:gap-2">
               <SoundToggle />
               <BackgroundMusicToggle />
             </div>
-            <div className="flex items-center gap-6">
+            
+            {/* Scores and Timer */}
+            <div className="flex items-center gap-2 sm:gap-4 md:gap-6">
               {category && (
-                <div className="text-right glass px-4 py-2 rounded-xl backdrop-blur-sm">
-                  <div className="text-xs opacity-90 font-medium">Category Score</div>
-                  <div className="text-2xl font-bold text-yellow-300">{categoryScore}</div>
+                <div className="text-right glass px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl backdrop-blur-sm">
+                  <div className="text-[10px] sm:text-xs opacity-90 font-medium">Category</div>
+                  <div className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-300">{categoryScore}</div>
                 </div>
               )}
-              <div className="text-right glass px-4 py-2 rounded-xl backdrop-blur-sm">
-                <div className="text-xs opacity-90 font-medium">Global Score</div>
-                <div className="text-2xl font-bold text-yellow-300">{globalScore}</div>
+              <div className="text-right glass px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl backdrop-blur-sm">
+                <div className="text-[10px] sm:text-xs opacity-90 font-medium">Global</div>
+                <div className="text-lg sm:text-xl md:text-2xl font-bold text-yellow-300">{globalScore}</div>
               </div>
               {showTimer && timer !== null && (
-                <div className={`text-right glass px-4 py-2 rounded-xl backdrop-blur-sm ${timer <= 10 ? 'animate-pulse bg-red-500/30' : ''}`}>
-                  <div className="text-xs opacity-90 font-medium">Time</div>
-                  <div className={`text-2xl font-bold ${timer <= 10 ? 'text-red-300' : 'text-yellow-300'}`}>{formatTime(timer)}</div>
+                <div className={`text-right glass px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl backdrop-blur-sm ${timer <= 10 ? 'animate-pulse bg-red-500/30' : ''}`}>
+                  <div className="text-[10px] sm:text-xs opacity-90 font-medium">Time</div>
+                  <div className={`text-lg sm:text-xl md:text-2xl font-bold ${timer <= 10 ? 'text-red-300' : 'text-yellow-300'}`}>{formatTime(timer)}</div>
                 </div>
               )}
             </div>

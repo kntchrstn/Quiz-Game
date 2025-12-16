@@ -75,6 +75,10 @@ const FourPics = () => {
   const handleLetterClick = (letter, index) => {
     if (showFeedback) return;
     
+    // Don't add more letters than the answer length
+    const current = rounds[currentRound];
+    if (selectedLetters.length >= current.answer.length) return;
+    
     // Remove letter from available and add to selected
     const newAvailable = [...availableLetters];
     newAvailable.splice(index, 1);
@@ -285,24 +289,27 @@ const FourPics = () => {
               </div>
             )}
             
-            {/* Selected Letters (Answer) */}
+            {/* Selected Letters (Answer) - Fixed number of tiles */}
             <div className="mb-4 sm:mb-6">
               <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">Your Answer:</label>
-              <div className="min-h-[50px] p-2 sm:p-3 bg-gray-50 rounded-lg border-2 border-gray-300 flex flex-wrap gap-1.5 sm:gap-2 items-center">
-                {selectedLetters.length > 0 ? (
-                  selectedLetters.map((letter, index) => (
+              <div className="p-2 sm:p-3 bg-gray-50 rounded-lg border-2 border-gray-300 flex flex-wrap gap-1.5 sm:gap-2 justify-center items-center">
+                {Array.from({ length: current.answer.length }).map((_, index) => {
+                  const letter = selectedLetters[index] || null;
+                  return (
                     <button
                       key={index}
-                      onClick={() => handleSelectedLetterClick(index)}
-                      disabled={showFeedback}
-                      className="px-2.5 sm:px-3 py-1.5 sm:py-2 bg-blue-500 text-white font-bold text-base sm:text-lg rounded-lg hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed touch-manipulation"
+                      onClick={() => letter && handleSelectedLetterClick(index)}
+                      disabled={showFeedback || !letter}
+                      className={`min-w-[40px] sm:min-w-[50px] h-[40px] sm:h-[50px] font-bold text-base sm:text-lg rounded-lg transition-colors touch-manipulation ${
+                        letter
+                          ? 'bg-blue-500 text-white hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed'
+                          : 'bg-gray-200 border-2 border-dashed border-gray-400 text-gray-400 cursor-default'
+                      }`}
                     >
-                      {letter}
+                      {letter || ''}
                     </button>
-                  ))
-                ) : (
-                  <span className="text-gray-400 italic text-xs sm:text-sm">Click letters below to form your answer</span>
-                )}
+                  );
+                })}
               </div>
             </div>
             
