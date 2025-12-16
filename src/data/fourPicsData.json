@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "answer": "PYRAMID",
+    "difficulty": "easy",
+    "hint": "Ancient Egyptian triangular tombs"
+  },
+  {
+    "id": 2,
+    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "answer": "NILE",
+    "difficulty": "easy",
+    "hint": "The longest river in Africa, flows through Egypt"
+  },
+  {
+    "id": 3,
+    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "answer": "CAIRO",
+    "difficulty": "easy",
+    "hint": "The capital city of Egypt"
+  },
+  {
+    "id": 4,
+    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "answer": "SPHINX",
+    "difficulty": "easy",
+    "hint": "Mythical creature with a lion's body and human head"
+  },
+  {
+    "id": 5,
+    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "answer": "PHARAOH",
+    "difficulty": "easy",
+    "hint": "Ancient Egyptian ruler"
+  },
+  {
+    "id": 6,
+    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "answer": "CLEOPATRA",
+    "difficulty": "medium",
+    "hint": "Famous Egyptian queen"
+  },
+  {
+    "id": 7,
+    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "answer": "ALEXANDRIA",
+    "difficulty": "medium",
+    "hint": "Egyptian port city on the Mediterranean"
+  },
+  {
+    "id": 8,
+    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "answer": "HIEROGLYPHICS",
+    "difficulty": "medium",
+    "hint": "Ancient Egyptian writing system"
+  },
+  {
+    "id": 9,
+    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "answer": "MUMMY",
+    "difficulty": "medium",
+    "hint": "Preserved body from ancient Egypt"
+  },
+  {
+    "id": 10,
+    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "answer": "SCARAB",
+    "difficulty": "medium",
+    "hint": "Sacred beetle in ancient Egypt"
+  },
+  {
+    "id": 11,
+    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "answer": "TUTANKHAMUN",
+    "difficulty": "hard",
+    "hint": "Young pharaoh with a famous golden mask"
+  },
+  {
+    "id": 12,
+    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "answer": "KARNAK",
+    "difficulty": "hard",
+    "hint": "Famous temple complex in Luxor"
+  },
+  {
+    "id": 13,
+    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "answer": "OSIRIS",
+    "difficulty": "hard",
+    "hint": "Ancient Egyptian god of the afterlife"
+  },
+  {
+    "id": 14,
+    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "answer": "ABUSIMBEL",
+    "difficulty": "hard",
+    "hint": "Famous temple complex in southern Egypt"
+  },
+  {
+    "id": 15,
+    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "answer": "VALLEY",
+    "difficulty": "hard",
+    "hint": "Burial place of many pharaohs (Valley of the Kings)"
+  }
+]

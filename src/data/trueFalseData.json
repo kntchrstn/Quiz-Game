@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "statement": "Cairo is the capital city of Egypt.",
+    "isTrue": true,
+    "difficulty": "easy"
+  },
+  {
+    "id": 2,
+    "statement": "The Nile River is the longest river in the world.",
+    "isTrue": true,
+    "difficulty": "easy"
+  },
+  {
+    "id": 3,
+    "statement": "The Great Pyramid of Giza is the largest pyramid in Egypt.",
+    "isTrue": true,
+    "difficulty": "easy"
+  },
+  {
+    "id": 4,
+    "statement": "Arabic is the official language of Egypt.",
+    "isTrue": true,
+    "difficulty": "easy"
+  },
+  {
+    "id": 5,
+    "statement": "The Sphinx has the body of a lion and the head of a human.",
+    "isTrue": true,
+    "difficulty": "easy"
+  },
+  {
+    "id": 6,
+    "statement": "Cleopatra was the last pharaoh of ancient Egypt.",
+    "isTrue": true,
+    "difficulty": "medium"
+  },
+  {
+    "id": 7,
+    "statement": "The Valley of the Kings is located near Luxor.",
+    "isTrue": true,
+    "difficulty": "medium"
+  },
+  {
+    "id": 8,
+    "statement": "Egypt is located entirely in Africa.",
+    "isTrue": false,
+    "difficulty": "medium"
+  },
+  {
+    "id": 9,
+    "statement": "The ancient Library of Alexandria was destroyed by fire.",
+    "isTrue": true,
+    "difficulty": "medium"
+  },
+  {
+    "id": 10,
+    "statement": "The Red Sea borders Egypt to the north.",
+    "isTrue": false,
+    "difficulty": "medium"
+  },
+  {
+    "id": 11,
+    "statement": "Tutankhamun's tomb was discovered completely intact.",
+    "isTrue": true,
+    "difficulty": "hard"
+  },
+  {
+    "id": 12,
+    "statement": "The Rosetta Stone helped decipher hieroglyphics.",
+    "isTrue": true,
+    "difficulty": "hard"
+  },
+  {
+    "id": 13,
+    "statement": "All Egyptian pyramids are located in Giza.",
+    "isTrue": false,
+    "difficulty": "hard"
+  },
+  {
+    "id": 14,
+    "statement": "The ancient Egyptians invented paper.",
+    "isTrue": false,
+    "difficulty": "hard"
+  },
+  {
+    "id": 15,
+    "statement": "The Aswan High Dam was built to control the Nile River.",
+    "isTrue": true,
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "question": "What is the capital city of Egypt?",
+    "options": ["Alexandria", "Cairo", "Luxor", "Aswan"],
+    "answerIndex": 1,
+    "difficulty": "easy",
+    "categoryTag": "geography"
+  },
+  {
+    "id": 2,
+    "question": "Which famous river flows through Egypt?",
+    "options": ["Tigris", "Euphrates", "Nile", "Jordan"],
+    "answerIndex": 2,
+    "difficulty": "easy",
+    "categoryTag": "geography"
+  },
+  {
+    "id": 3,
+    "question": "What is the name of the famous ancient Egyptian writing system?",
+    "options": ["Cuneiform", "Hieroglyphics", "Latin", "Arabic"],
+    "answerIndex": 1,
+    "difficulty": "easy",
+    "categoryTag": "history"
+  },
+  {
+    "id": 4,
+    "question": "Which famous pyramid is located in Giza?",
+    "options": ["Great Pyramid of Khufu", "Pyramid of Djoser", "Bent Pyramid", "Red Pyramid"],
+    "answerIndex": 0,
+    "difficulty": "easy",
+    "categoryTag": "history"
+  },
+  {
+    "id": 5,
+    "question": "What is the official language of Egypt?",
+    "options": ["English", "French", "Arabic", "Hebrew"],
+    "answerIndex": 2,
+    "difficulty": "easy",
+    "categoryTag": "culture"
+  },
+  {
+    "id": 6,
+    "question": "Which ancient Egyptian queen was known for her beauty and intelligence?",
+    "options": ["Nefertiti", "Cleopatra", "Hatshepsut", "Nefertari"],
+    "answerIndex": 1,
+    "difficulty": "medium",
+    "categoryTag": "history"
+  },
+  {
+    "id": 7,
+    "question": "What is the name of the famous temple complex in Luxor?",
+    "options": ["Karnak Temple", "Abu Simbel", "Philae Temple", "Edfu Temple"],
+    "answerIndex": 0,
+    "difficulty": "medium",
+    "categoryTag": "history"
+  },
+  {
+    "id": 8,
+    "question": "Which sea borders Egypt to the north?",
+    "options": ["Red Sea", "Mediterranean Sea", "Black Sea", "Aegean Sea"],
+    "answerIndex": 1,
+    "difficulty": "medium",
+    "categoryTag": "geography"
+  },
+  {
+    "id": 9,
+    "question": "What is the name of the famous Egyptian bread?",
+    "options": ["Pita", "Naan", "Aish", "Baguette"],
+    "answerIndex": 2,
+    "difficulty": "medium",
+    "categoryTag": "culture"
+  },
+  {
+    "id": 10,
+    "question": "Which pharaoh built the Great Sphinx of Giza?",
+    "options": ["Khufu", "Khafre", "Menkaure", "Tutankhamun"],
+    "answerIndex": 1,
+    "difficulty": "medium",
+    "categoryTag": "history"
+  },
+  {
+    "id": 11,
+    "question": "What is the name of the ancient Egyptian sun god?",
+    "options": ["Osiris", "Ra", "Horus", "Anubis"],
+    "answerIndex": 1,
+    "difficulty": "hard",
+    "categoryTag": "history"
+  },
+  {
+    "id": 12,
+    "question": "Which famous library was located in ancient Alexandria?",
+    "options": ["Library of Pergamon", "Library of Alexandria", "Library of Ashurbanipal", "Vatican Library"],
+    "answerIndex": 1,
+    "difficulty": "hard",
+    "categoryTag": "history"
+  },
+  {
+    "id": 13,
+    "question": "What is the name of the valley where many pharaohs were buried?",
+    "options": ["Valley of the Kings", "Valley of the Queens", "Valley of the Nobles", "Valley of the Workers"],
+    "answerIndex": 0,
+    "difficulty": "hard",
+    "categoryTag": "history"
+  },
+  {
+    "id": 14,
+    "question": "Which Egyptian city is known as the 'Pearl of the Mediterranean'?",
+    "options": ["Cairo", "Alexandria", "Port Said", "Suez"],
+    "answerIndex": 1,
+    "difficulty": "hard",
+    "categoryTag": "geography"
+  },
+  {
+    "id": 15,
+    "question": "What is the name of the famous Egyptian cotton?",
+    "options": ["Giza 45", "Giza 86", "Giza 70", "Giza 45"],
+    "answerIndex": 0,
+    "difficulty": "hard",
+    "categoryTag": "culture"
+  }
+]

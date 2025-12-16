@@ -1,0 +1,32 @@
+{
+  "easy": [
+    "NILE",
+    "CAIRO",
+    "PYRAMID",
+    "SPHINX",
+    "PHARAOH",
+    "DESERT",
+    "SAND",
+    "SUN"
+  ],
+  "medium": [
+    "HIEROGLYPHICS",
+    "ALEXANDRIA",
+    "LUXOR",
+    "CLEOPATRA",
+    "TUTANKHAMUN",
+    "KARNAK",
+    "ASWAN",
+    "GIZA"
+  ],
+  "hard": [
+    "ARCHAEOLOGY",
+    "MUMMIFICATION",
+    "VALLEY",
+    "NEFERTITI",
+    "RAMESSES",
+    "OSIRIS",
+    "HORUS",
+    "SCARAB"
+  ]
+}
