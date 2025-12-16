@@ -36,35 +36,35 @@
   },
   {
     "id": 6,
-    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "images": ["/cleo1.jpg", "/cleo2.jpg", "/cleo3.jpg", "/cleo4.jpg"],
     "answer": "CLEOPATRA",
     "difficulty": "medium",
     "hint": "Famous Egyptian queen"
   },
   {
     "id": 7,
-    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "images": ["/alex1.jpg", "/alex2.jpg", "/alex3.jpg", "/alex4.jpg"],
     "answer": "ALEXANDRIA",
     "difficulty": "medium",
     "hint": "Egyptian port city on the Mediterranean"
   },
   {
     "id": 8,
-    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "images": ["/heiro1.jpg", "/heiro2.jpg", "/heiro3.jpg", "/heiro4.jpg"],
     "answer": "HIEROGLYPHICS",
     "difficulty": "medium",
     "hint": "Ancient Egyptian writing system"
   },
   {
     "id": 9,
-    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "images": ["/mummy1.jpg", "/mummy2.jpg", "/mummy3.jpg", "/mummy4.jpg"],
     "answer": "MUMMY",
     "difficulty": "medium",
     "hint": "Preserved body from ancient Egypt"
   },
   {
     "id": 10,
-    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "images": ["/scarab1.jpg", "/scarab2.jpg", "/scarab3.jpg", "/scarab4.jpg"],
     "answer": "SCARAB",
     "difficulty": "medium",
     "hint": "Sacred beetle in ancient Egypt"
