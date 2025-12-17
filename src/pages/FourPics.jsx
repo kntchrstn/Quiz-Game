@@ -8,7 +8,8 @@ import ProgressBar from '../components/ProgressBar';
 import Modal from '../components/Modal';
 import { shuffle } from '../utils/helpers';
 import { getGlobalScore, saveGlobalScore, getCategoryScores, saveCategoryScore, getSettings } from '../utils/storage';
-import { playCorrectSound, playWrongSound, playWinSound, initAudio } from '../utils/sounds';
+import { playCorrectSound, playWrongSound, playWinSound, playLoseSound, initAudio } from '../utils/sounds';
+import { useTimer } from '../utils/useTimer';
 
 /**
  * 4 Pics 1 Word page
@@ -29,6 +30,23 @@ const FourPics = () => {
   const [showFeedback, setShowFeedback] = useState(false);
   const settings = getSettings();
   
+  // Timer based on difficulty
+  const timerDurations = {
+    easy: 120,    // 2 minutes
+    medium: 90,   // 1.5 minutes
+    hard: 60,     // 1 minute
+  };
+  
+  const handleTimeUp = () => {
+    playLoseSound(settings.soundEnabled);
+    // Auto-submit or move to next round when time is up
+    if (!showFeedback && rounds.length > 0) {
+      handleSubmit();
+    }
+  };
+  
+  const { seconds, start, reset, pause, isActive } = useTimer(timerDurations[difficulty], handleTimeUp);
+  
   useEffect(() => {
     if (gameStarted) {
       const filtered = fourPicsData.filter(q => q.difficulty === difficulty);
@@ -41,6 +59,8 @@ const FourPics = () => {
       setUserAnswer('');
       setSelectedLetters([]);
       setShowHint(false);
+      reset(timerDurations[difficulty]);
+      start();
     }
   }, [gameStarted, difficulty]);
   
@@ -126,8 +146,12 @@ const FourPics = () => {
         setSelectedLetters([]);
         setShowHint(false);
         setShowFeedback(false);
+        // Reset timer for next round
+        reset(timerDurations[difficulty]);
+        start();
       } else {
         // Game over
+        pause();
         const globalScore = getGlobalScore();
         const categoryScores = getCategoryScores();
         saveGlobalScore(globalScore + score);
@@ -156,6 +180,7 @@ const FourPics = () => {
     setCorrectCount(0);
     setShowEndScreen(false);
     setShowFeedback(false);
+    reset(timerDurations[difficulty]);
   };
   
   if (!gameStarted) {
@@ -240,7 +265,7 @@ const FourPics = () => {
   
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
-      <GameHeader category="fourPics" />
+      <GameHeader category="fourPics" showTimer timer={seconds} />
       <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-8">
         <div className="max-w-4xl mx-auto">
           <ProgressBar 

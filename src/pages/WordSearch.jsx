@@ -8,7 +8,8 @@ import Modal from '../components/Modal';
 import { generateWordSearchGrid } from '../utils/helpers';
 import { getGlobalScore, saveGlobalScore, getCategoryScores, saveCategoryScore } from '../utils/storage';
 import { getSettings } from '../utils/storage';
-import { playCorrectSound, playWinSound, initAudio } from '../utils/sounds';
+import { playCorrectSound, playWinSound, playLoseSound, initAudio } from '../utils/sounds';
+import { useTimer } from '../utils/useTimer';
 
 /**
  * Word Search Puzzle page
@@ -31,6 +32,20 @@ const WordSearch = () => {
     hard: 14,
   };
   
+  // Timer based on difficulty
+  const timerDurations = {
+    easy: 180,    // 3 minutes
+    medium: 240,  // 4 minutes
+    hard: 300,    // 5 minutes
+  };
+  
+  const handleTimeUp = () => {
+    playLoseSound(settings.soundEnabled);
+    // End game when time is up
+  };
+  
+  const { seconds, start, reset, pause } = useTimer(timerDurations[difficulty], handleTimeUp);
+  
   useEffect(() => {
     if (gameStarted) {
       const wordList = wordSearchData[difficulty];
@@ -40,6 +55,8 @@ const WordSearch = () => {
       setWords(placedWords);
       setFoundWords(new Set());
       setSelectedCells([]);
+      reset(timerDurations[difficulty]);
+      start();
     }
   }, [gameStarted, difficulty]);
   
@@ -186,9 +203,18 @@ const WordSearch = () => {
     setGameStarted(false);
     setFoundWords(new Set());
     setSelectedCells([]);
+    reset(timerDurations[difficulty]);
   };
   
   const allWordsFound = words.length > 0 && words.every(w => w.found);
+  const timeUp = seconds === 0;
+  
+  // Pause timer when all words found
+  useEffect(() => {
+    if (allWordsFound) {
+      pause();
+    }
+  }, [allWordsFound]);
   
   if (!gameStarted) {
     return (
@@ -231,7 +257,7 @@ const WordSearch = () => {
   
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
-      <GameHeader category="wordSearch" />
+      <GameHeader category="wordSearch" showTimer timer={seconds} />
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
@@ -264,11 +290,18 @@ const WordSearch = () => {
               <div className="bg-white rounded-xl shadow-lg p-6">
                 <div className="flex justify-between items-center mb-6">
                   <h2 className="text-xl font-bold">Find the Words</h2>
-                  {allWordsFound && (
-                    <div className="text-green-600 font-bold text-lg">
-                      🎉 All Words Found!
-                    </div>
-                  )}
+                  <div className="flex items-center gap-4">
+                    {timeUp && !allWordsFound && (
+                      <div className="text-red-600 font-bold text-lg">
+                        ⏰ Time's Up!
+                      </div>
+                    )}
+                    {allWordsFound && (
+                      <div className="text-green-600 font-bold text-lg">
+                        🎉 All Words Found!
+                      </div>
+                    )}
+                  </div>
                 </div>
                 
                 <div className="w-full flex justify-center">

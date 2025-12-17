@@ -57,7 +57,7 @@
   },
   {
     "id": 9,
-    "images": ["/mummy1.jpg", "/mummy2.jpg", "/mummy3.jpg", "/mummy4.jpg"],
+    "images": ["/mummy1.jpg", "/mummy2.jpg", "/mummy3.jpg", "/mummy4.jpeg"],
     "answer": "MUMMY",
     "difficulty": "medium",
     "hint": "Preserved body from ancient Egypt"
@@ -71,35 +71,35 @@
   },
   {
     "id": 11,
-    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
-    "answer": "TUTANKHAMUN",
+    "images": ["/tutan1.jpg", "/tutan2.jpg", "/tutan3.jpg", "/tutan4.jpg"],
+    "answer": "TUTANKHAMUN",  
     "difficulty": "hard",
     "hint": "Young pharaoh with a famous golden mask"
   },
   {
     "id": 12,
-    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "images": ["/karnak1.jpg", "/karnak2.jpg", "/karnak3.jpg", "/karnak4.png"],
     "answer": "KARNAK",
     "difficulty": "hard",
     "hint": "Famous temple complex in Luxor"
   },
   {
     "id": 13,
-    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "images": ["/orisis1.jpg", "/orisis2.jpg", "/orisis3.png", "/orisis4.jpg"],
     "answer": "OSIRIS",
     "difficulty": "hard",
     "hint": "Ancient Egyptian god of the afterlife"
   },
   {
     "id": 14,
-    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "images": ["/abu1.jpg", "/abu2.jpg", "/abu3.jpg", "/abu4.jpg"],
     "answer": "ABUSIMBEL",
     "difficulty": "hard",
     "hint": "Famous temple complex in southern Egypt"
   },
   {
     "id": 15,
-    "images": ["/placeholder1.png", "/placeholder2.png", "/placeholder3.png", "/placeholder4.png"],
+    "images": ["/valley1.jpg", "/valley2.jpg", "/valley3.jpg", "/valley4.jpg"],
     "answer": "VALLEY",
     "difficulty": "hard",
     "hint": "Burial place of many pharaohs (Valley of the Kings)"
